@@ -1,3 +1,4 @@
+// AddTransaction.js
 import React, { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { GlobalContext } from "../context/GlobalState";
@@ -73,7 +74,7 @@ const AddTransaction = () => {
             type="text"
             name="incomeText"
             value={incomeText}
-            placeholder="Add Income..."
+            placeholder="Tambahkan Pendapatan..."
             autoComplete="off"
             onChange={onChangeIncome}
           />
@@ -81,7 +82,7 @@ const AddTransaction = () => {
             type="number"
             name="incomeAmount"
             value={incomeAmount}
-            placeholder="Amount"
+            placeholder="Jumlah (Rupiah)"
             autoComplete="off"
             onChange={onChangeIncome}
           />
@@ -94,7 +95,7 @@ const AddTransaction = () => {
             type="text"
             name="expenseText"
             value={expenseText}
-            placeholder="Add Expense..."
+            placeholder="Tambahkan Pengeluaran..."
             autoComplete="off"
             onChange={onChangeExpense}
           />
@@ -102,7 +103,7 @@ const AddTransaction = () => {
             type="number"
             name="expenseAmount"
             value={expenseAmount}
-            placeholder="Amount"
+            placeholder="Jumlah (Rupiah)"
             autoComplete="off"
             onChange={onChangeExpense}
           />

@@ -1,14 +1,18 @@
+// IncomeTransaction.js
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 const IncomeTransaction = ({ incomeTransaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
 
+  const formatRupiah = (amount) => 
+    new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(amount);
+
   return (
     <li className="transaction">
       <span className="transaction-text">{incomeTransaction.incomeText}</span>
       <span className="transaction-amount">
-        ${incomeTransaction.incomeAmount}
+        {formatRupiah(incomeTransaction.incomeAmount)}
       </span>
       <button
         onClick={() => deleteTransaction(incomeTransaction.id)}
